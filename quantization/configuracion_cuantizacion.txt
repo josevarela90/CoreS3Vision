@@ -1,0 +1,50 @@
+﻿CONFIGURACION DE CUANTIZACION ESP-DL
+
+Modelo:
+yolo26n_hammer_plier_core_reforzado.pt
+
+Target:
+ESP32-S3
+
+Input:
+256 x 256
+
+Batch:
+1
+
+Calibracion maxima:
+64 imagenes
+
+Calibration steps:
+32
+
+Metodo:
+percentile
+
+Alignment:
+Align to Output
+
+TQT steps:
+200
+
+TQT learning rate:
+1e-5
+
+TQT INT lambda:
+0.25
+
+TQT block size:
+4
+
+Dispositivo TQT:
+CPU
+
+Clases:
+0 = hammer
+1 = plier
+
+Preprocesamiento:
+Letterbox con padding 114.
+
+El preprocesamiento fue ajustado para corresponder con
+el utilizado por ESP-DL en el dispositivo.

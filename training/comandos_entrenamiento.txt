@@ -1,0 +1,28 @@
+﻿# ============================================================
+# MODELO BASELINE 109
+# ============================================================
+
+Modelo:
+YOLO26n
+
+Dataset:
+C:\YOLO\CORE_REAL\dataset_109_split\data.yaml
+
+Clases:
+0 = hammer
+1 = plier
+
+
+# ============================================================
+# MODELO FINAL REFORZADO
+# ============================================================
+
+yolo detect train `
+model="C:\YOLO\runs_core_manual_finetune\hammer_plier_core_manual_finetune\weights\best.pt" `
+data="C:\YOLO\CORE_REAL\dataset_109_core_reforzado\data.yaml" `
+imgsz=256 `
+epochs=80 `
+batch=16 `
+project="C:\YOLO\runs_core_reforzado" `
+name="hammer_plier_core_reforzado" `
+device=cpu

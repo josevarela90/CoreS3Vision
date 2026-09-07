@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this project, please cite the associated IEEE Open Journal of the Computer Society paper."
+title: "Resource-Aware Camera-Domain Adaptation for Portable Edge-AI Visual Inspection"
+type: software
+authors:
+  - family-names: "Sánchez"
+    given-names: "Carlos A."
+  - family-names: "Sánchez"
+    given-names: "Jorge S."
+  - family-names: "Del-Valle-Soto"
+    given-names: "Carolina"
+  - family-names: "Varela-Aldás"
+    given-names: "José"
+    email: "josevarela@uti.edu.ec"
+repository-code: "https://github.com/REPLACE-WITH-ACCOUNT/cores3-edge-ai-visual-inspection"
+license: MIT
+date-released: 2026-09-06

@@ -1,0 +1,8 @@
+﻿grupo,modelo,n_imagenes,resultado,hammer_promedio,plier_promedio,observacion
+plier_core,baseline_109,15,3/15_plier_mayor_hammer,,,Modelo original
+plier_core,manual_finetune,15,4/15_plier_mayor_hammer,0.1949,0.1182,Mejora insuficiente
+plier_core,final_reforzado,15,15/15_plier_mayor_hammer,0.0027,0.8424,Mejor comportamiento en dominio CoreS3
+hammer_core,baseline_109,6,6/6_hammer_mayor_plier,0.2378,0.0016,Modelo original
+hammer_core,final_reforzado,6,6/6_hammer_mayor_plier,0.7522,0.0031,Mayor confianza hammer
+independiente_playo,final_reforzado,1,plier_mayor_hammer,0.1792,0.2282,Imagen dificil independiente
+independiente_hammer,final_reforzado,1,hammer_mayor_plier,0.5297,0.2200,Imagen dificil independiente

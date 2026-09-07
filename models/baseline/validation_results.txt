@@ -1,0 +1,31 @@
+﻿MODELO BASELINE - YOLO26n HAMMER/PLIER
+
+Dataset de validacion:
+22 imagenes
+39 instancias
+
+RESULTADOS PT
+
+Global:
+Precision = 0.898
+Recall = 0.776
+mAP50 = 0.920
+mAP50-95 = 0.585
+
+Hammer:
+Precision = 0.842
+Recall = 0.739
+mAP50 = 0.859
+mAP50-95 = 0.559
+
+Plier:
+Precision = 0.953
+Recall = 0.812
+mAP50 = 0.981
+mAP50-95 = 0.610
+
+OBSERVACION:
+El modelo obtuvo buenas metricas en el conjunto de validacion,
+pero presento una fuerte perdida de rendimiento cuando se utilizaron
+imagenes reales capturadas directamente por la camara del M5Stack CoreS3,
+especialmente para la clase plier.

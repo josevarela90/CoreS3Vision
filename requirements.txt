@@ -1,0 +1,8 @@
+ultralytics
+onnx
+onnxruntime
+numpy
+pandas
+Pillow
+matplotlib
+# ESPDL quantization additionally requires the Espressif ESP-DL / ESP-PPQ environment used by the notebook.

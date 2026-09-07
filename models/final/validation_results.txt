@@ -1,0 +1,37 @@
+﻿MODELO FINAL REFORZADO
+
+RESULTADOS DE VALIDACION
+
+Global:
+Precision = 0.995
+Recall = 0.891
+mAP50 = 0.959
+mAP50-95 = 0.570
+
+Hammer:
+Precision = 0.996
+Recall = 0.783
+mAP50 = 0.923
+mAP50-95 = 0.584
+
+Plier:
+Precision = 0.993
+Recall = 1.000
+mAP50 = 0.995
+mAP50-95 = 0.556
+
+El principal beneficio del modelo final fue la adaptacion
+al dominio real de la camara CoreS3.
+
+En las 15 imagenes reales de plier usadas durante el proceso
+de adaptacion:
+
+PLIER > HAMMER = 15/15
+
+Promedios:
+Hammer = 0.0027
+Plier = 0.8424
+
+IMPORTANTE:
+Estas imagenes participaron en el proceso de entrenamiento/refuerzo,
+por lo que no deben presentarse como un conjunto de prueba independiente.

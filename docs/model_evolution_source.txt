@@ -1,0 +1,63 @@
+﻿EVOLUCION DEL MODELO
+
+1. MODELO BASELINE
+Se utilizo YOLO26n para deteccion multiclase de hammer y plier.
+El modelo obtuvo buenas metricas en validacion convencional, pero
+presento una perdida importante de rendimiento frente a imagenes
+capturadas directamente mediante la camara del M5Stack CoreS3.
+
+2. PRUEBA CON RESOLUCION 320x240
+Se adapto el conjunto de imagenes a la resolucion de la camara.
+Esta estrategia no resolvio el cambio de dominio.
+
+3. SIMULACION DE CAMARA
+Se aplicaron modificaciones de brillo, contraste, saturacion,
+desenfoque gaussiano y compresion JPEG.
+La mejora obtenida fue insuficiente.
+
+4. INCORPORACION DE IMAGENES REALES CORES3
+Se adquirieron imagenes directamente con la camara del dispositivo.
+
+5. ETIQUETADO SEMIAUTOMATICO
+Se intento utilizar el modelo baseline para generar cajas iniciales.
+Esta estrategia no fue suficientemente fiable, principalmente para
+la clase plier.
+
+6. ETIQUETADO MANUAL
+Las imagenes reales CoreS3 fueron etiquetadas manualmente para asegurar
+la correcta localizacion de hammer y plier.
+
+7. REFUERZO DEL DOMINIO CORES3
+Las imagenes reales se aumentaron para incrementar su representacion
+durante el entrenamiento.
+
+Plier:
+15 imagenes originales x 7 versiones = 105
+
+Hammer:
+6 imagenes originales x 4 versiones = 24
+
+Total incorporado desde el dominio CoreS3:
+129 imagenes.
+
+Dataset final de entrenamiento:
+216 imagenes.
+
+Dataset de validacion:
+22 imagenes.
+
+8. MODELO FINAL
+El modelo reforzado mostro una mejora importante en el reconocimiento
+de plier en imagenes obtenidas mediante la CoreS3.
+
+9. DESPLIEGUE
+El modelo fue exportado:
+PyTorch -> ONNX -> ESPDL
+
+Posteriormente fue ejecutado en ESP32-S3 mediante ESP-DL.
+
+NOTA METODOLOGICA:
+Las imagenes CoreS3 utilizadas para entrenamiento y aumento no deben
+considerarse un conjunto independiente de prueba. Para evaluar
+generalizacion se requiere un nuevo conjunto de imagenes no utilizado
+durante entrenamiento, aumento ni calibracion.

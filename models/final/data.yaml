@@ -1,0 +1,7 @@
+﻿path: C:/YOLO/CORE_REAL/dataset_109_core_reforzado
+train: images/train
+val: images/val
+
+names:
+  0: hammer
+  1: plier

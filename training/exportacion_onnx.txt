@@ -1,0 +1,18 @@
+﻿EXPORTACION ONNX DEL MODELO FINAL
+
+yolo export `
+model="C:\YOLO\runs_core_reforzado\hammer_plier_core_reforzado\weights\best.pt" `
+format=onnx `
+imgsz=256 `
+opset=13 `
+simplify=False
+
+Archivo resultante:
+
+C:\YOLO\runs_core_reforzado\hammer_plier_core_reforzado\weights\best.onnx
+
+Entrada:
+1 x 3 x 256 x 256
+
+Salida:
+1 x 300 x 6

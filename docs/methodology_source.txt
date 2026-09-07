@@ -1,0 +1,41 @@
+﻿METODOLOGIA GENERAL
+
+1. Se entreno un modelo YOLO26n para deteccion multiclase de:
+   - hammer
+   - plier
+
+2. El modelo utilizo una entrada de 256 x 256 pixeles.
+
+3. El modelo baseline mostro buen rendimiento en validacion
+   convencional, pero presento problemas cuando se utilizaron
+   fotografias obtenidas directamente mediante la camara del CoreS3.
+
+4. Se identifico un cambio de dominio entre las imagenes utilizadas
+   inicialmente para entrenamiento y las imagenes del dispositivo.
+
+5. Se evaluaron diferentes estrategias:
+   - cambio de resolucion a 320 x 240;
+   - simulacion de degradacion de camara;
+   - incorporacion de imagenes reales CoreS3;
+   - etiquetado manual;
+   - fine-tuning;
+   - aumento y refuerzo de imagenes del dominio real.
+
+6. La estrategia final utilizo imagenes reales capturadas directamente
+   mediante el M5Stack CoreS3 y aumentaciones orientadas al dominio
+   embebido.
+
+7. El modelo final se exporto:
+   PyTorch -> ONNX -> ESPDL.
+
+8. El modelo ESPDL fue ejecutado sobre ESP32-S3.
+
+9. El sistema final realiza:
+   - adquisicion de imagen;
+   - inferencia;
+   - clasificacion;
+   - localizacion;
+   - conteo;
+   - visualizacion;
+   - almacenamiento;
+   - transferencia de resultados mediante Wi-Fi.

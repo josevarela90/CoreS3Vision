@@ -1,0 +1,5 @@
+Suggested repository name: cores3-edge-ai-visual-inspection
+After upload, replace REPLACE-WITH-ACCOUNT in:
+- CITATION.cff
+- paper/ojcs_cores3_yolo26.tex (ProjectRepository macro)
+with the actual GitHub account/organization.

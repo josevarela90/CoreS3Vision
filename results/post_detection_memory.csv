@@ -1,0 +1,5 @@
+metric,bytes,note
+free_internal_ram,11919,measured immediately after blocking detection routine returned
+largest_internal_free_block,7680,measured immediately after blocking detection routine returned
+free_psram,6858372,measured immediately after blocking detection routine returned
+largest_psram_free_block,6815744,measured immediately after blocking detection routine returned

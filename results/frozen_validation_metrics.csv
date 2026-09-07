@@ -1,0 +1,7 @@
+model,scope,precision,recall,map50,map50_95
+baseline,global,0.898,0.776,0.920,0.585
+baseline,hammer,0.842,0.739,0.859,0.559
+baseline,plier,0.953,0.812,0.981,0.610
+camera_reinforced,global,0.995,0.891,0.959,0.570
+camera_reinforced,hammer,0.996,0.783,0.923,0.584
+camera_reinforced,plier,0.993,1.000,0.995,0.556
